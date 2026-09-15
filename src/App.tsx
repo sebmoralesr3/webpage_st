@@ -14,23 +14,23 @@ import linkedinLogo from './assets/linkedin_logo.svg'
 import instagramLogo from './assets/instagram_logo.svg'
 import contactIllustration from './assets/contact-illustration.png'
 import ablePhone from './assets/project-able-phone.png'
-import progresaPhone from './assets/project-progresa-phone.png'
+import provaliaPhone from './assets/project-provalia-phone.png'
 import solvenStockPhone from './assets/project-solvenstock-phone.png'
 
 const navItems = [['Inicio','inicio'],['Servicios','servicios'],['Proyectos','proyectos'],['Nosotros','nosotros'],['Contacto','contacto']]
 const projects = {
   ABLE: ['Promueve el bienestar y el desarrollo humano mediante herramientas tecnológicas que fortalecen el seguimiento y el acompañamiento de las personas.','Facilita la identificación temprana de señales de alerta, brindando información que apoya la toma de decisiones de manera oportuna.','Complementa el trabajo de los profesionales, aportando herramientas que fortalecen el acompañamiento sin reemplazar su labor.'],
-  Progresa: ['Una solución digital diseñada para acompañar procesos de crecimiento, seguimiento y desarrollo organizacional.','Centraliza información relevante y convierte los datos en herramientas útiles para tomar mejores decisiones.','Su experiencia clara y accesible facilita la adopción por parte de equipos y usuarios.'],
+  Provalia: ['Una solución digital diseñada para acompañar procesos de crecimiento, seguimiento y desarrollo organizacional.','Centraliza información relevante y convierte los datos en herramientas útiles para tomar mejores decisiones.','Su experiencia clara y accesible facilita la adopción por parte de equipos y usuarios.'],
   "Solven N’Stock": ['Una plataforma pensada para simplificar el control de inventario y fortalecer la operación cotidiana de las empresas.','Permite organizar productos, movimientos y existencias desde una experiencia práctica y centralizada.','Transforma tareas repetitivas en procesos medibles, ordenados y fáciles de escalar.'],
 }
 const projectImages: Record<keyof typeof projects, string> = {
   ABLE: ablePhone,
-  Progresa: progresaPhone,
+  Provalia: provaliaPhone,
   "Solven N’Stock": solvenStockPhone,
 }
 const projectGradients: Record<keyof typeof projects, string> = {
   ABLE: 'linear-gradient(145deg, #009640 0%, #009FE3 38%, #F9B233 70%, #E6332A 100%)',
-  Progresa: 'linear-gradient(145deg, #FEAD01 0%, #E86F44 48%, #5CB7A5 100%)',
+  Provalia: 'linear-gradient(145deg, #FEAD01 0%, #E86F44 48%, #5CB7A5 100%)',
   "Solven N’Stock": 'linear-gradient(145deg, #000000 0%, #285C94 55%, #243076 100%)',
 }
 const process = [
