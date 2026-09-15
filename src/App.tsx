@@ -87,7 +87,7 @@ function App() {
     <main>
       <div className="hero-screen">
       <section className="hero" id="inicio">
-        <div className="hero-copy"><h1>Convertimos tus retos en soluciones que impulsan tu negocio.</h1><p className="hero-lead">Diseñamos experiencias digitales, desarrollos a la medida, automatizaciones inteligentes e identidades de marca pensadas para transformar la forma en que tu empresa opera, conecta y crece.</p><div className="hero-actions"><a href="#contacto" className="button button-dark">Cuéntanos tu reto</a><a href="#proyectos" className="button button-outline">Ver proyectos</a></div></div>
+        <div className="hero-copy"><h1>Convertimos tus retos en soluciones que impulsan tu negocio.</h1><p className="hero-lead">Diseñamos experiencias digitales, desarrollos a la medida, automatizaciones inteligentes e identidades de marca pensadas para transformar la forma en que tu empresa opera, conecta y crece.</p><div className="hero-actions"><a href="#contacto" className="button button-dark">Cuéntanos tu reto</a><a href="https://calendly.com/dptotecnologico-solventechglobal/solventech" target="_blank" rel="noopener noreferrer" className="button button-outline">Agendar cita</a></div></div>
         <div className="hero-robot" aria-label="Robot interactivo de Solventech"><Robot /></div>
       </section>
       <div className="logo-marquee" aria-label="Clientes"><div className="logo-track">{[kreaLogo,zonedInLogo,stratosLogo,grupoLogo,electrosumigLogo,kreaLogo,zonedInLogo,stratosLogo,grupoLogo,electrosumigLogo].map((x,i)=><img src={x} alt="" key={i}/>)}</div></div>
