@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Alejandro Fontalvo",
+        "position": "CEO & Founder",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/alejandro-fontalvo-g%C3%B3mez-1548b72a5/"
+    },
+    {
+        "name": "Sibeli Rodriguez",
+        "position": "Co-Founder & COO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/sibeli-rodr%C3%ADguez-d%C3%ADaz-b406b8289/"
+    },
+    {
+        "name": "Juan S. Morales",
+        "position": "CCO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/juan-sebastian-morales-rincon-973867314/"
+    },
+    {
+        "name": "Sebastian Negrete",
+        "position": "CMO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/seb0231/"
+    },
+    {
+        "name": "Tabata Llach Bruges",
+        "position": "CTO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/tllach"
+    },
+    {
+        "name": "Enrique Buitrago",
+        "position": "Project Specialist",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/enrique-buitrago-guevara-319263304/"
+    },
+    {
+        "name": "Sibeli Rodriguez",
+        "position": "Co-Founder & COO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/sibeli-rodr%C3%ADguez-d%C3%ADaz-b406b8289/"
+    },
+    {
+        "name": "Juan S. Morales",
+        "position": "CCO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/juan-sebastian-morales-rincon-973867314/"
+    },
+    {
+        "name": "Sebastian Negrete",
+        "position": "CMO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/seb0231/"
+    },
+    {
+        "name": "Tabata Llach Bruges",
+        "position": "CTO",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/tllach"
+    },
+    {
+        "name": "Enrique Buitrago",
+        "position": "Project Specialist",
+        "image": "src/assets/member.png",
+        "link": "https://www.linkedin.com/in/enrique-buitrago-guevara-319263304/"
+    }
+]
