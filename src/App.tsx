@@ -15,6 +15,7 @@ import contactIllustration from './assets/contact-illustration.png'
 import ablePhone from './assets/project-able-phone.webp'
 import provaliaPhone from './assets/project-provalia-phone.webp'
 import solvenStockPhone from './assets/project-solvenstock-phone.webp'
+import robotHero from './assets/robot-hero.webp'
 
 const Robot = lazy(() => import('./components/Robot'))
 
@@ -51,6 +52,7 @@ const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)
   const [showRobot,setShowRobot] = useState(false)
+  const [interactiveRobot,setInteractiveRobot] = useState(() => window.matchMedia('(min-width: 851px)').matches)
   const [activeProject,setActiveProject] = useState<keyof typeof projects>('ABLE')
   const [openSteps,setOpenSteps] = useState<number[]>([])
   const [contactType,setContactType] = useState('hola')
@@ -59,6 +61,12 @@ function App() {
   useEffect(() => {
     const timer = window.setTimeout(() => setShowRobot(true), 900)
     return () => window.clearTimeout(timer)
+  }, [])
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 851px)')
+    const updateRobotMode = () => setInteractiveRobot(media.matches)
+    media.addEventListener('change', updateRobotMode)
+    return () => media.removeEventListener('change', updateRobotMode)
   }, [])
   const toggleStep = (i:number) => setOpenSteps(v => v.includes(i) ? v.filter(x => x !== i) : [...v,i])
   const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -94,7 +102,11 @@ function App() {
       <div className="hero-screen">
       <section className="hero" id="inicio">
         <div className="hero-copy"><h1>Creamos software y soluciones digitales que impulsan tu negocio.</h1><p className="hero-lead">Diseñamos software a medida, experiencias digitales, automatizaciones inteligentes e identidades de marca para transformar la forma en que las empresas en Colombia operan, conectan y crecen.</p><div className="hero-actions"><a href="#contacto" className="button button-dark">Cuéntanos tu reto</a><a href="https://calendly.com/dptotecnologico-solventechglobal/solventech" target="_blank" rel="noopener noreferrer" className="button button-outline">Agendar cita</a></div></div>
-        <div className="hero-robot" aria-label="Robot interactivo de Solventech">{showRobot&&<Suspense fallback={<div className="robot-placeholder" aria-hidden="true"/>}><Robot /></Suspense>}</div>
+        <div className="hero-robot" aria-label={interactiveRobot?'Robot interactivo de Solventech':'Robot de Solventech'}>
+          {interactiveRobot
+            ? showRobot&&<Suspense fallback={<div className="robot-placeholder" aria-hidden="true"/>}><Robot /></Suspense>
+            : <img className="hero-robot-static" src={robotHero} alt="Robot de Solventech" width="1879" height="924" fetchPriority="high" decoding="async" />}
+        </div>
       </section>
       <div className="logo-marquee" aria-label="Clientes"><div className="logo-track">{[kreaLogo,zonedInLogo,stratosLogo,grupoLogo,electrosumigLogo,kreaLogo,zonedInLogo,stratosLogo,grupoLogo,electrosumigLogo].map((x,i)=><img src={x} alt="" key={i}/>)}</div></div>
       </div>
