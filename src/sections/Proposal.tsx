@@ -12,8 +12,8 @@ const Proposal = () => {
                 </a>
             </div>
             <div className="hidden lg:flex w-1/2 h-64 relative">
-                    <img src={Esfera} alt="black sphere" className="absolute top-18 left-1/3  w-24 h-24 animate-bounce"/>
-                    <img src={Estrellas} alt="abstract stars" className="absolute w-full h-full"/>
+                    <img src={Esfera} alt="" width="125" height="125" className="absolute top-18 left-1/3 w-24 h-24 animate-bounce"/>
+                    <img src={Estrellas} alt="" width="359" height="395" className="absolute w-full h-full"/>
             </div>
         </section>
     )

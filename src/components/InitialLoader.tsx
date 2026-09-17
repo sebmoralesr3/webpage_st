@@ -14,6 +14,6 @@ export default function InitialLoader() {
     if (!isVisible) return null
 
     return <div className="initial-loader" aria-hidden="true">
-        <img src={SolventechLogo} alt="" className="initial-loader-logo" />
+        <img src={SolventechLogo} alt="" width="273" height="31" className="initial-loader-logo" />
     </div>
 }
