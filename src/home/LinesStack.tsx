@@ -6,7 +6,8 @@ import { SectionHead } from './Reveal'
 import isotipo from '../assets/st-isotipo.svg'
 import logo from '../assets/logo.svg'
 
-const ease = [0.2, 0.7, 0.1, 1] as const
+import { EASE_OUT } from './motion'
+const ease = EASE_OUT
 
 function Chain({ current }: { current: number }) {
   return (
@@ -78,6 +79,8 @@ type Card = { tone: 'white' | 'claro' | 'night'; title: string; text: string; it
 function StackCard({ card, index, total, progress }: { card: Card; index: number; total: number; progress: MotionValue<number> }) {
   const reduce = useReducedMotion()
   const scale = useTransform(progress, [index / total, 1], [1, 1 - (total - 1 - index) * 0.045])
+  // La tarjeta que queda atrás se oscurece un poco: da profundidad a la pila.
+  const shade = useTransform(progress, [index / total, 1], [0, (total - 1 - index) * 0.08])
   return (
     <div className="stack-slot" style={{ top: `calc(96px + ${index * 26}px)` }}>
       <motion.article className={`stack-card tone-${card.tone}`} style={{ scale: reduce ? 1 : scale }}>
@@ -93,6 +96,7 @@ function StackCard({ card, index, total, progress }: { card: Card; index: number
           </a>
         </div>
         {card.visual}
+        {!reduce && <motion.span className="stack-shade" style={{ opacity: shade }} aria-hidden="true" />}
       </motion.article>
     </div>
   )

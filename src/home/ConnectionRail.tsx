@@ -23,7 +23,7 @@ export default function ConnectionRail() {
   const activeIndex = SECTIONS.findIndex((s) => s.id === active)
 
   return (
-    <nav className="rail" aria-label="Recorrido de la página">
+    <nav className={`rail ${active === 'productos' ? 'is-faded' : ''}`} aria-label="Recorrido de la página">
       <span className="rail-track" aria-hidden="true">
         <motion.span className="rail-fill" style={{ scaleY: reduce ? scrollYProgress : fill }} />
       </span>

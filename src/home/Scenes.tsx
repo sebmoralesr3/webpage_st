@@ -3,7 +3,8 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import logo from '../assets/logo.svg'
 import isotipo from '../assets/st-isotipo.svg'
 
-const ease = [0.2, 0.7, 0.1, 1] as const
+import { EASE_OUT } from './motion'
+const ease = EASE_OUT
 const PALETTE = [
   { name: 'Negro', hex: '#000000' },
   { name: 'Claro', hex: '#F4F4F4' },

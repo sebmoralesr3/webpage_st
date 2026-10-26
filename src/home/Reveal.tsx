@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import { EASE_OUT } from './motion'
 
 /** Aparece suave al entrar en pantalla. Con "reducir movimiento" se muestra sin desplazamiento. */
 export default function Reveal({ children, delay = 0, className, as = 'div' }: { children: ReactNode; delay?: number; className?: string; as?: 'div' | 'li' | 'article' }) {
@@ -7,10 +8,10 @@ export default function Reveal({ children, delay = 0, className, as = 'div' }: {
   return (
     <Tag
       className={className}
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: '0px 0px -12% 0px' }}
-      transition={{ duration: 0.8, delay, ease: [0.2, 0.7, 0.1, 1] }}
+      transition={{ duration: 0.7, delay, ease: EASE_OUT }}
     >
       {children}
     </Tag>
@@ -24,7 +25,7 @@ export function SectionHead({ num, label, title, lead }: { num: string; label: s
       <Reveal>
         <p className="eyebrow">
           <span className="eyebrow-num">{num}</span>
-          <motion.span className="eyebrow-line" aria-hidden="true" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: [0.2, 0.7, 0.1, 1] }} />
+          <motion.span className="eyebrow-line" aria-hidden="true" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: EASE_OUT }} />
           {label}
         </p>
       </Reveal>
